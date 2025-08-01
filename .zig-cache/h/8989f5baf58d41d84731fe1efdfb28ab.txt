@@ -1,0 +1,4 @@
+0
+4736 7775632 1754088798672158233 096f36dd31842a872378f35653af45df 0 /home/lucas/code/projects/zig/mindstorm/ev3dev-c/source/ev3/crc32.c
+447 7775640 1753990745713836635 503725b14c45b1f7c2a7eb187f433c0c 0 /home/lucas/code/projects/zig/mindstorm/ev3dev-c/source/ev3/crc32.h
+31054 7650070 1753765085000000000 1df950c62cbc96dd5d9790733bbe6016 1 include/stdint.h
