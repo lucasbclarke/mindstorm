@@ -7,6 +7,15 @@ This project demonstrates how to compile the ev3dev-c library using Zig on NixOS
 - NixOS with Zig installed
 - Python 2.7 (for yupp preprocessor)
 
+## Cloning the Repository
+
+The repository includes the complete ev3dev-c library as regular files (not as a submodule). Simply clone normally:
+
+```bash
+git clone https://github.com/lucasbclarke/mindstorm.git
+cd mindstorm
+```
+
 ## Building
 
 ### 1. Generate C Files
@@ -40,7 +49,7 @@ zig build
 
 - `src/main.zig` - Main Zig application
 - `build.zig` - Zig build configuration
-- `ev3dev-c/` - ev3dev-c library source
+- `ev3dev-c/` - ev3dev-c library source (included as regular files)
 - `generate_c_files.sh` - Script to regenerate C files from yupp sources
 - `shell.nix` - Nix shell environment for cross-compilation
 
@@ -53,4 +62,5 @@ The project is configured to cross-compile to ARM Linux (gnueabihf) targeting th
 - The ev3dev-c library requires the yupp preprocessor to generate C files from `.yu-c` and `.yu-h` files
 - The generated C files are included directly in the Zig build
 - The project links against libc for C standard library support
-- The executable is compiled for ARM Linux and should run on the EV3 brick !1
+- The executable is compiled for ARM Linux and should run on the EV3 brick
+- The ev3dev-c library is included as regular files in the repository (not as a submodule)
