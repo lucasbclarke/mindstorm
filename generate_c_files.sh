@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 
 echo "Generating C files from yupp source files..."
 
