@@ -53,4 +53,4 @@ The project is configured to cross-compile to ARM Linux (gnueabihf) targeting th
 - The ev3dev-c library requires the yupp preprocessor to generate C files from `.yu-c` and `.yu-h` files
 - The generated C files are included directly in the Zig build
 - The project links against libc for C standard library support
-- The executable is compiled for ARM Linux and should run on the EV3 brick 
+- The executable is compiled for ARM Linux and should run on the EV3 brick !1
