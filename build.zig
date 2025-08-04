@@ -25,10 +25,7 @@ pub fn build(b: *std.Build) void {
     exe.addIncludePath(b.path("ev3dev-c/source/ev3/ev3_link"));
     exe.addIncludePath(b.path("ev3dev-c/3d_party"));
     
-    // Link against libc
     exe.linkLibC();
-    
-    // Add C source files directly to the executable
     exe.addCSourceFiles(.{
         .files = &.{
             "ev3dev-c/source/ev3/ev3.c",
@@ -48,4 +45,12 @@ pub fn build(b: *std.Build) void {
     });
     
     b.installArtifact(exe);
+
+    const scp_step = b.addSystemCommand(&[_][]const u8{
+        "scp",
+        "user@192.168.0.123:/home/user/bin/my_program",
+    });
+    
+    scp_step.step.dependOn(&exe.step);
+    b.step("scp", "Build and send over SCP").dependOn(&scp_step.step);
 }
